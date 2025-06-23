@@ -175,3 +175,42 @@ body {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
   line-height: 1.5;
 }
+
+
+.buscador-input:focus {
+  border-color: #e91e63;
+  box-shadow: 0 0 5px rgba(233, 30, 99, 0.4);
+}
+.buscador-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 3.5rem; /* más espacio arriba y abajo */
+  width: 100%;
+}
+
+.buscador-input {
+  width: 100%;
+  max-width: 520px;
+  padding: 1.2rem 1.8rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #444444;
+  background-color: #fff;
+  border: 2px solid #d8a7b1; /* rosa suave */
+  border-radius: 50px;
+  box-shadow: 0 6px 16px rgba(216, 167, 177, 0.25);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Open Sans', sans-serif;
+  outline: none;
+}
+
+.buscador-input::placeholder {
+  color: #d8a7b1;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.buscador-input:focus {
+  border-color: #a75c6d; /* rosa vino más oscuro */
+  box-shadow: 0 0 15px rgba(167, 92, 109, 0.45);
+}

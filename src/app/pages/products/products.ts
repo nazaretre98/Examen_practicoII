@@ -1,19 +1,30 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product, Products as ProductsService } from '../../services/products';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './products.html',
   styleUrls: ['./products.css']
 })
 export class Productos {
   productos: Product[] = [];
+  terminoBusqueda: string = '';
 
   constructor(private productsService: ProductsService) {
     this.productos = this.productsService.getProducts();
+  }
+
+  get productosFiltrados(): Product[] {
+    if (!this.terminoBusqueda) return this.productos;
+    const termino = this.terminoBusqueda.toLowerCase();
+    return this.productos.filter(producto =>
+      producto.nombre.toLowerCase().includes(termino) ||
+      producto.descripcion.toLowerCase().includes(termino)
+    );
   }
 
   toggleMostrarMas(producto: Product): void {
