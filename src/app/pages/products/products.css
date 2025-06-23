@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Open+Sans:wght@300;400;600&display=swap');
+
+/* General */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+  color: #2f2f2f;
+}
+
+/* Títulos */
+.titulo {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #222222;
+  font-style: italic;
+  margin: 2.5rem 0 1.5rem;
+}
+
+/* Productos */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 2.6rem;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+}
+
+/* Producto */
+.producto {
+  background-color: #fff;
+  border: 1px solid #dddcdc;
+  border-radius: 18px;
+  padding: 1.8rem 2rem;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.35s ease;
+  text-align: center;
+}
+
+.producto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.producto-imagen {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.producto-nombre {
+  font-size: 1.5rem;
+  color: #1c1c1c;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.producto-descripcion {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #777777;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.producto-precio {
+  font-size: 1.25rem;
+  color: #444444;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 1.4rem;
+}
+
+/* Botones elegantes y sobrios */
+.boton-detalles,
+.boton-agregar,
+.boton-favorito,
+.boton-comprar {
+  background-color: transparent;
+  color: #444444;
+  border: 2px solid #888888;
+  padding: 0.65rem 1.6rem;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.25s ease;
+  margin: 0.35rem 0.45rem;
+  user-select: none;
+  box-shadow: none;
+  outline-offset: 3px;
+  font-family: 'Open Sans', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Detalles */
+.boton-detalles {
+  border-color: #b3b3b3;
+  color: #555555;
+}
+
+.boton-detalles:hover {
+  background-color: #f5f5f5;
+  color: #333333;
+  border-color: #a1a1a1;
+  box-shadow: 0 4px 14px rgba(150, 150, 150, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Agregar - mismo estilo que comprar */
+.boton-agregar,
+.boton-comprar {
+  border-color: #222222;
+  color: #222222;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.boton-agregar:hover,
+.boton-comprar:hover {
+  background-color: #222222;
+  color: #f9f9f9;
+  border-color: #111111;
+  box-shadow: 0 8px 26px rgba(34, 34, 34, 0.5);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Favorito - borde y texto vino suave */
+.boton-favorito {
+  border-color: #a75c6d;
+  color: #a75c6d;
+}
+
+.boton-favorito:hover {
+  background-color: #a75c6d;
+  color: #fff;
+  border-color: #7a4453;
+  box-shadow: 0 6px 20px rgba(167, 92, 109, 0.4);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Foco accesible */
+.boton-detalles:focus,
+.boton-agregar:focus,
+.boton-favorito:focus,
+.boton-comprar:focus {
+  outline: 3px solid #999999;
+  outline-offset: 4px;
+  box-shadow: 0 0 10px rgba(150,150,150,0.4);
+}
+
+/* Detalles expandibles */
+.producto-detalles {
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  font-style: italic;
+  color: #5a5a5a;
+  background-color: #fefefe;
+  padding: 1.2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  line-height: 1.5;
+}
